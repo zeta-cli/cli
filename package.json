@@ -1,0 +1,55 @@
+{
+  "name": "@zeta-cli/cli",
+  "version": "1.0.0",
+  "description": "Zeta Command Line Interface",
+  "main": "bin/zeta-cli.js",
+  "bin": {
+    "zeta-cli": "bin/zeta-cli.js",
+    "zcli": "bin/zeta-cli.js",
+    "zeta": "bin/zeta-cli.js",
+    "z": "bin/zeta-cli.js"
+  },
+  "scripts": {
+    "test": "jest",
+    "clean": "gulp clean",
+    "build": "gulp && cp *.md package.json dist/ ",
+    "deploy": "npm run build && cd ./dist && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/zeta-cli/cli.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/zeta-cli"
+  },
+  "keywords": [
+    "zeta",
+    "cli",
+    "command",
+    "line",
+    "interface"
+  ],
+  "author": "Antonio Hermosilla",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/zeta-cli/cli/issues"
+  },
+  "homepage": "https://github.com/zeta-cli/cli#readme",
+  "dependencies": {
+    "@zeta-cli/z-log": "^1.0.11",
+    "@zeta-cli/ztk-hello-world": "^1.0.0",
+    "cli": "^1.0.1",
+    "debug": "^4.1.1",
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.14",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-javascript-obfuscator": "^1.1.6",
+    "vinyl-sourcemaps-apply": "^0.2.1"
+  },
+  "pkg": {
+    "scripts": "src/**/*.js"
+  }
+}

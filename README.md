@@ -6,7 +6,7 @@ Zeta Command Line Interface
 
 zeta-cli is the online command interface that allows you to launch automation tasks registered in zeta.
 
-### Installing
+## Installing
 
 To install zeta-cli you just need to add the domain registration @zeta-cli in your npmrc:
 
@@ -14,7 +14,7 @@ To install zeta-cli you just need to add the domain registration @zeta-cli in yo
 ```
 # File: .npmrc
 @zeta-cli:registry=https://npm.pkg.github.com/zeta-cli
-//npm.pkg.github.com/:_authToken=cd30ab4c97a8bdfd17cf78363958ec0a97d7d346
+//npm.pkg.github.com/:_authToken=1660005c0ec56055cf749ba592e984f75d3b2f0d
 ```
 
 Now you can do:
@@ -23,7 +23,7 @@ Now you can do:
 npm install @zeta-cli/cli
 ```
 
-### Use example
+## Use example
 
 
 ```bash
