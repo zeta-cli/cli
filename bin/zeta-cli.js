@@ -23,7 +23,12 @@ const { parser } = require('./../lib/arguments.parser');
 
 cli.setApp('zeta-cli', pkg.version);
 cli.enable('timeout', 'version');
-cli.parse(null, { task: 'Task management command' });
+cli.parse(null,
+  {
+    task: 'Task management command'
+    // 'task-ls-remote': 'List available remote tasks to install'
+  }
+);
 
 cli.main((args, options) => {
 
@@ -33,6 +38,6 @@ cli.main((args, options) => {
   // Parser argumetns
   parser(process.argv.splice(3, process.argv.length));
 
-  const command = require(`./../src/commands/${cli.command}`);
+  const command = require(`./../lib/commands/${cli.command}`);
   command.execute(args, options, process.argv);
 });

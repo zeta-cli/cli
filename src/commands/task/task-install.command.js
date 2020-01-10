@@ -16,7 +16,7 @@
  */
 const cli = require('cli');
 const debug = require('debug')('zeta');
-const { log, logf, errorf } =  require('@zeta-cli/z-log');
+const { log, logf, errorf } = require('@zeta-cli/z-log');
 
 module.exports = {
 
@@ -35,7 +35,7 @@ module.exports = {
     try {
       var child_process = require('child_process');
 
-      child_process.execSync('npm config set @zeta-cli https://npm.pkg.github.com/zeta-cli');
+      // child_process.execSync('npm config set @zeta-cli https://npm.pkg.github.com/zeta-cli');
       child_process.execSync(`npm install @zeta-cli/ztk-${taskname}`, { stdio: [0, 1] });
 
       cli.spinner(logf(`Installed ${taskname} successfully.`), true);
