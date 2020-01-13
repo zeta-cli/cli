@@ -19,7 +19,7 @@
 
 const cli = require('cli');
 const pkg = require('./../package.json');
-const { parser } = require('./../lib/arguments.parser');
+const { parser } = require('../lib/shared/helpers/arguments.parser');
 
 cli.setApp('zeta-cli', pkg.version);
 cli.enable('timeout', 'version');
