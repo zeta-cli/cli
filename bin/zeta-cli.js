@@ -23,21 +23,23 @@ const { parser } = require('../lib/shared/helpers/arguments.parser');
 
 cli.setApp('zeta-cli', pkg.version);
 cli.enable('timeout', 'version');
-cli.parse(null,
-  {
-    task: 'Task management command'
-    // 'task-ls-remote': 'List available remote tasks to install'
-  }
-);
+cli.parse(null, {
+  task: 'Task management command'
+  // 'task-ls-remote': 'List available remote tasks to install'
+});
 
-cli.main((args, options) => {
+cli.main((args, opts) => {
 
-  // node bin/zeta-cli.js task --scopes-0-name MCA --scopes-0-paths 'path1,path2' --scopes-1-name MCA --scopes-1-paths 'path1,path2'
-  // node bin/zeta-cli.js task -J '{ "scopes": [ {"name":"MCA", "paths":["path1", "path2"]}, {"name":"MCA", "paths":["path1", "path2"]} ] }'
+// node bin/zeta-cli.js task --scopes-0-name MCA --scopes-0-paths 'path1,path2' --scopes-1-name MCA --scopes-1-paths 'path1,path2'
+// node bin/zeta-cli.js task -J '{ "scopes": [ {"name":"MCA", "paths":["path1", "path2"]}, {"name":"MCA", "paths":["path1", "path2"]} ] }'
 
-  // Parser argumetns
-  parser(process.argv.splice(3, process.argv.length));
+  // Parser arguments
+
+  const options = parser(process.argv.splice(3, process.argv.length));
+
+  const commands = options.commands;
+  delete options.commands;
 
   const command = require(`./../lib/commands/${cli.command}`);
-  command.execute(args, options, process.argv);
+  command.execute(args, commands, options);
 });

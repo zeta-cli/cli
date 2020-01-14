@@ -37,7 +37,8 @@
   "homepage": "https://github.com/zeta-cli/cli#readme",
   "dependencies": {
     "@zeta-cli/z-log": "^1.0.11",
-    "@zeta-cli/ztk-hello-world": "^1.0.0",
+    "@zeta-cli/ztk-hello-world": "^1.0.2",
+    "ajv": "^6.10.2",
     "cli": "^1.0.1",
     "debug": "^4.1.1",
     "lodash": "^4.17.15"
