@@ -1,6 +1,6 @@
 {
   "name": "@zeta-cli/cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Zeta Command Line Interface",
   "main": "bin/zeta-cli.js",
   "bin": {
@@ -37,8 +37,6 @@
   "homepage": "https://github.com/zeta-cli/cli#readme",
   "dependencies": {
     "@zeta-cli/z-log": "^1.0.11",
-    "@zeta-cli/ztk-caixa-arquitectura": "^1.0.4",
-    "@zeta-cli/ztk-hello-world": "^1.0.2",
     "ajv": "^6.10.2",
     "cli": "^1.0.1",
     "debug": "^4.1.1",
