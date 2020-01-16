@@ -13,8 +13,10 @@ To install zeta-cli you just need to add the domain registration @zeta-cli in yo
 ```
 # File: .npmrc
 @zeta-cli:registry=https://npm.pkg.github.com/zeta-cli
-//npm.pkg.github.com/:_authToken=b086c56aec5ba9fe45c46166259b6d1effb67188
+//npm.pkg.github.com/:_authToken=<TOKEN>
 ```
+
+You must request the access token.
 
 Now you can do:
 
