@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /*
- * This file is part of the zeta-cli distribution (https://github.com/hermosillaeveris/zeta-cli).
+ * This file is part of the zeta-cli distribution (https://github.com/zeta-cli/cli.git).
  * Copyright (c) 2019 Antonio Hermosilla.
  *
  * This program is free software: you can redistribute it and/or modify
